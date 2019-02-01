@@ -1,0 +1,38 @@
+.example-form {
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+  .example-card {
+    width: 100%;
+  } 
+
+
+  mat-grid-tile {
+  background: lightblue;
+}
+
+.container-fluid {
+  background: lightblue;
+}
+
+.list-group-item {
+  background: lightblue;
+}
+
+.col-lg {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.jumbotron {
+  height: 100px;
+  background: rgb(84, 84, 109);
+  color: white;
+}

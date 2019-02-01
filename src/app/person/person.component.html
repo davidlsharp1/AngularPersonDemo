@@ -1,0 +1,57 @@
+ 
+  <div class="row">
+     <div class="col-lg"> 
+        <div class="jumbotron">
+            <h4 class="display-4">Add a Person</h4>
+        </div>
+     </div> 
+  </div>
+  <div class="row">
+        <div class="col-lg">
+              <mat-card class="example-card">
+                  <h1>Person</h1>
+                  <form [formGroup]="myForm" class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Enter Your Name" formControlName="name" >
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Enter Your Age" formControlName="age" >
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Enter Your Email" formControlName="email" >
+                    </mat-form-field>
+                    <button [disabled] = "myForm.invalid" (click)="Save()" mat-raised-button color="primary">Add Person</button>
+                  </form>
+                </mat-card>
+        </div>
+        <div class="col-lg">
+              <ul class="list-group">
+                  <li class="list-group-item"  *ngFor="let item of myArray; let i = index">
+                      <ul class="list-group">
+                          <li class="list-group-item">
+                              <mat-card class="example-card">
+                                  <mat-card-header>
+                                    <div mat-card-avatar class="example-header-image"></div>
+                                    <mat-card-title>{{i + 1}}</mat-card-title>
+                                    <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+                                    <mat-card-subtitle>{{item.agel}}</mat-card-subtitle>
+                                    <mat-card-subtitle>{{item.email}}</mat-card-subtitle>
+                                  </mat-card-header>
+                                  <mat-card-actions>
+                                    <button mat-button color="accent" (click)="edit(i)">Edit</button>
+                                    <button mat-button color="warn" (click)="delete(i)" >Delete</button>
+                                  </mat-card-actions>
+                                </mat-card>
+                          </li>
+                        </ul>  
+                  </li>
+                </ul>
+        </div>
+      </div>
+      <div class="row">
+      </div> 
+ 
+
+
+
+
